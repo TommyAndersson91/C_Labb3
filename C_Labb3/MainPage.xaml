@@ -1,7 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="C_Labb3.MainPage">
-    <StackLayout>
+    <StackLayout Margin="20">
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <StackLayout Margin="10">
+        <Label Text="Inmatat belopp:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="20"/>
+        <Label x:Name="totalAmount" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <StackLayout Margin="10">
+        <Label Text="Momssats" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Label x:Name="vatPercentage" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <StackLayout Margin="10">
+        <Label Text="Uträknat belopp:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label x:Name="amountWithoutVAT" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <StackLayout Margin="10">
+        <Label Text="Uträknad moms:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label x:Name="VATSum" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <StackLayout Margin="10">
+        <Entry Placeholder="Skriv ett belopp inklusive moms" Keyboard="Numeric" x:Name="amountEnter"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <StackLayout Padding="30">
+        <Button Text="8%" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="Calc"></Button>
+        <Button Text="12%" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="Calc"></Button>
+        <Button Text="25%" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="Calc"></Button>
+            </StackLayout>
     </StackLayout>
 </ContentPage>

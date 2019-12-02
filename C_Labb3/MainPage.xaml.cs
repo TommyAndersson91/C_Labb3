@@ -17,5 +17,23 @@ namespace C_Labb3
         {
             InitializeComponent();
         }
+
+  
+        public void Calc(object sender, EventArgs e)
+        {
+            totalAmount.Text = amountEnter.Text;
+            double.TryParse(totalAmount.Text, out double totalAmountDouble);
+            String vat = ((Button)sender).Text;
+            var vatFix = vat.Remove(vat.Length - 1);
+            double.TryParse(vatFix, out double vatAmount);
+            double calculatedAmount = totalAmountDouble / (1 + (vatAmount / 100));
+            double withoutVAT = totalAmountDouble - calculatedAmount;
+
+            
+            vatPercentage.Text = vat;
+            amountWithoutVAT.Text = calculatedAmount.ToString();
+            VATSum.Text = withoutVAT.ToString();
+
+        }
     }
 }
