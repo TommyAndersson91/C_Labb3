@@ -19,7 +19,7 @@
 
         <StackLayout Margin="10">
         <Label Text="Uträknad moms:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        <Label x:Name="VATSum" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label x:Name="vatSum" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
         </StackLayout>
 
         <StackLayout Margin="10">

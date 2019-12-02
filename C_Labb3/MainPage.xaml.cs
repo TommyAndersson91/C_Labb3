@@ -26,13 +26,13 @@ namespace C_Labb3
             String vat = ((Button)sender).Text;
             var vatFix = vat.Remove(vat.Length - 1);
             double.TryParse(vatFix, out double vatAmount);
-            double calculatedAmount = totalAmountDouble / (1 + (vatAmount / 100));
-            double withoutVAT = totalAmountDouble - calculatedAmount;
+            double amountWoVat = totalAmountDouble / (1 + (vatAmount / 100));
+            double withoutVAT = totalAmountDouble - amountWoVat;
 
             
             vatPercentage.Text = vat;
-            amountWithoutVAT.Text = calculatedAmount.ToString();
-            VATSum.Text = withoutVAT.ToString();
+            amountWithoutVAT.Text = amountWoVat.ToString();
+            vatSum.Text = withoutVAT.ToString();
 
         }
     }
